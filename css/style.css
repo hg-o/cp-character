@@ -17,7 +17,7 @@
   --radius-sm: 10px;
   --page-x: clamp(16px, 4vw, 28px);
   --frame-max: 700px;
-  --thumb: clamp(104px, 26vw, 170px);
+  --thumb: clamp(84px, 26vw, 170px);
   --tabbar-h: 64px;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
@@ -202,7 +202,7 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .chat-list { display: flex; flex-direction: column; gap: 10px; }
 .chat-item {
   display: flex; background: var(--card); border-radius: var(--radius-lg); overflow: hidden;
-  height: var(--thumb);
+  min-height: var(--thumb);
 }
 .chat-item__img { width: var(--thumb); flex: none; }
 .chat-item__img.ph::after { background: linear-gradient(90deg, transparent 60%, rgba(28,28,30,.9) 100%),
@@ -211,6 +211,7 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
   flex: 1; min-width: 0; padding: 14px 4px 14px 14px;
   display: flex; flex-direction: column; justify-content: center; gap: 4px;
 }
+.chat-item__body > * { flex: none; }
 .chat-item__title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
 .chat-item__last {
   font-size: 13.5px; color: var(--text-2);
@@ -280,10 +281,11 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 
 /* ---------- notice ---------- */
 .banner {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
   padding: 16px 16px 16px 20px; margin-top: 6px; margin-bottom: 14px;
 }
 .banner__text { display: inline-flex; align-items: center; gap: 12px; font-size: 16px; font-weight: 600; }
+.banner .btn { flex: none; white-space: nowrap; margin-left: auto; }
 
 .notice-list { display: flex; flex-direction: column; }
 .notice-item { display: flex; gap: 14px; padding: 18px 0 20px; }
@@ -320,7 +322,7 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 }
 .tab {
   display: flex; flex-direction: column; align-items: center; gap: 3px;
-  width: 64px; height: 100%; justify-content: center; color: #8e8e93; font-size: 12px;
+  flex: 1 1 0; min-width: 0; padding: 0 4px; height: 100%; justify-content: center; color: #8e8e93; font-size: 12px;
 }
 .tab svg { width: 24px; height: 24px; stroke-width: 1.7; }
 .tab.is-active { color: #fff; }
@@ -377,7 +379,7 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
   .tabbar { bottom: 18px; }
   .tabbar__pill, .tabbar__webtoon { height: 70px; }
   .tabbar__webtoon { width: 70px; }
-  .tab { width: 84px; font-size: 13px; }
+  .tab { font-size: 13px; }
   .tab svg { width: 26px; height: 26px; }
   .tabbar__webtoon span { font-size: 10.5px; }
 }
@@ -601,3 +603,65 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .chat-item__img { position: relative; overflow: hidden; }
 .chat-item__img > img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .chat-item__img > img + *, .chat-item__img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, rgba(28,28,30,.9) 100%); }
+
+/* ---------- no minimum width: let everything shrink ---------- */
+html, body, .phone { min-width: 0; }
+.tabbar__pill { min-width: 0; }
+.tab span { white-space: nowrap; }
+.profile__official { white-space: nowrap; }
+.profile__actions .btn { white-space: nowrap; padding: 0 8px; font-size: clamp(12px, 4vw, 16px); }
+.btn--gift { gap: 6px; }
+.jelly__count, .banner__text, .list-head h3 { white-space: nowrap; }
+
+@media (max-width: 359px) {
+  :root { --radius-lg: 16px; }
+  .topbar { height: 56px; }
+  .logo img { height: 22px; }
+  .icon-btn { width: 38px; height: 38px; }
+  .pagehead h1 { font-size: 21px; }
+  .hero__title { font-size: 17px; }
+  .hero__sub { font-size: 12px; }
+  .hero__body { padding: 0 14px 16px; }
+  .seg { gap: 16px; }
+  .seg__tab { font-size: 18px; }
+  .section__title { font-size: 18px; }
+  .chip { height: 40px; font-size: 13px; padding-right: 14px; gap: 8px; }
+  .chip--plain { padding: 0 14px; }
+  .avatar--sm { width: 26px; height: 26px; }
+  .story-card { border-radius: 14px; }
+  .story-card__body { padding: 10px 10px 12px; gap: 2px; }
+  .story-card__body h3 { font-size: 14px; }
+  .story-card__body p, .count, .author { font-size: 11.5px; }
+  .official { font-size: 11px; }
+  .chat-item__title { font-size: 15px; }
+  .chat-item__last, .chat-item__count { font-size: 12.5px; }
+  .chat-item__body { padding: 10px 4px 10px 10px; gap: 3px; }
+  .chat-item__count { margin-top: 4px; }
+  .banner { padding: 12px 12px 12px 14px; }
+  .banner__text { font-size: 14px; gap: 8px; }
+  .creator__avatar { width: 60px; height: 60px; }
+  .creator__name { font-size: 18px; }
+  .btn--block { height: 46px; font-size: 15px; }
+  .menu a { height: 52px; font-size: 14px; padding: 0 12px 0 14px; }
+  .notice-item__title { font-size: 15px; }
+  .notice-item__desc { font-size: 13px; }
+  .profile__top { gap: 12px; }
+  .profile__avatar { width: 72px; height: 72px; }
+  .profile__name { font-size: 20px; }
+  .profile__official { font-size: 13px; padding: 6px 10px; }
+  .profile__follow { font-size: 13.5px; }
+  .ptab { height: 46px; font-size: 15px; }
+  .pill { height: 36px; padding: 0 14px; font-size: 14px; }
+  .list-head h3 { font-size: 16px; }
+  .sort { font-size: 13px; }
+  .grid-3 { gap: 14px 8px; }
+  .work__title { font-size: 13px; }
+  .work__series, .work__count, .work__desc { font-size: 12px; }
+  .work__tag { font-size: 10px; padding: 4px 6px; }
+  .tabbar { bottom: 10px; }
+  .tabbar__pill, .tabbar__webtoon { height: 56px; }
+  .tabbar__webtoon { width: 56px; }
+  .tabbar__webtoon img { width: 30px; }
+  .tab { font-size: 11px; gap: 2px; }
+  .tab svg { width: 22px; height: 22px; }
+}
