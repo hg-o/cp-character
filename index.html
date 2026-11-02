@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>ByUs</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="phone">
+
+    <!-- ========== 홈 ========== -->
+    <main class="screen is-active" id="screen-home" data-screen="home">
+      <header class="topbar">
+        <h1 class="logo"><img src="assets/img/logo-byus.png" alt="ByUs"></h1>
+        <div class="topbar__actions">
+          <button class="icon-btn" aria-label="검색">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+          <button class="icon-btn has-dot" aria-label="알림" data-go="notice">
+            <svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="공유">
+            <svg viewBox="0 0 24 24"><path d="M12 3v13"/><path d="M8 7l4-4 4 4"/><path d="M5 12v8h14v-8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="section">
+        <a class="hero" href="#" id="hero">
+          <img class="hero__img" src="assets/img/hero-1.png" alt="청사초롱">
+          <div class="hero__body">
+            <span class="hero__badge">NEW</span>
+            <h2 class="hero__title">🟥🟦 달은 밝은데 무료하구나</h2>
+            <p class="hero__sub">&lt;청사초롱&gt; 출시 기념 젤리 할인 진행 중</p>
+          </div>
+          <div class="hero__dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i></div>
+        </a>
+      </section>
+
+      <section class="section">
+        <div class="seg" role="tablist" aria-label="웹툰원작 / 오리지널">
+          <button class="seg__tab is-active" role="tab" data-panel="story" aria-selected="true">웹툰원작</button>
+          <button class="seg__tab" role="tab" data-panel="character" aria-selected="false">오리지널</button>
+        </div>
+
+        <!-- 스토리 탭 -->
+        <div class="panel is-active" data-panel="story">
+        <div class="hscroll chips" role="tablist">
+          <button class="chip chip--plain is-active" role="tab">전체</button>
+          <button class="chip" role="tab"><span class="avatar avatar--sm"><img src="assets/img/haein.jpg" alt=""></span>내 최애는 막차를 탄다</button>
+          <button class="chip" role="tab"><span class="avatar avatar--sm"><img src="assets/img/garbagetime.png" alt=""></span>가비지타임</button>
+          <button class="chip" role="tab"><span class="avatar avatar--sm ph ph-star"></span>별정</button>
+          <button class="chip" role="tab"><span class="avatar avatar--sm ph ph-flower"></span>꽃</button>
+        </div>
+
+        <div class="grid-2 popular">
+          <a class="story-card" href="#">
+            <div class="story-card__img"><img src="assets/img/haein.jpg" alt="그 노래 좋아해요?" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Story</span>
+              <h3>그 노래 좋아해요?</h3>
+              <p>막차시간, 내게 다가오는 그녀</p>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>7.8만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#">
+            <div class="story-card__img"><img src="assets/img/garbagetime.png" alt="농구 좋아하나? 내는 좋아한다" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Story</span>
+              <h3>농구 좋아하나? 내는 좋아한다</h3>
+              <p>오늘도 분명, 재밌을 기다</p>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>80.9만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#">
+            <div class="ph ph-flower story-card__img"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Story</span>
+              <h3>꽃이 피는 계절에</h3>
+              <p>데이지 사이로 보이는 얼굴</p>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>12.4만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#">
+            <div class="ph ph-snow story-card__img"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Story</span>
+              <h3>이제 와서 날 좋아한다고?</h3>
+              <p>눈 내리는 밤, 다시 만난 우리</p>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>35.1만</span>
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <!-- 캐릭터 탭 -->
+        <div class="panel" data-panel="character">
+        <div class="hscroll chips" role="tablist">
+          <button class="chip chip--plain is-active" role="tab" data-filter="all">전체</button>
+          <button class="chip" role="tab" data-filter="night"><span class="avatar avatar--sm"><img src="assets/img/orig-4.png" alt=""></span>야행 &lt;夜行&gt;</button>
+          <button class="chip" role="tab" data-filter="central"><span class="avatar avatar--sm"><img src="assets/img/orig-5.png" alt=""></span>중앙 난방 공국</button>
+        </div>
+
+        <div class="grid-2 popular">
+          <a class="story-card" href="#" data-series="night">
+            <div class="story-card__img"><img src="assets/img/orig-1.png" alt="부채 선비" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Character</span>
+              <h3>부채 선비</h3>
+              <p>내 속을 펼쳐보이는 건 그대 앞에서 뿐이군</p>
+              <span class="author"><span class="author__link" role="link" tabindex="0" data-author="진돌">진돌</span><span class="sep">·</span><span class="author__link" role="link" tabindex="0" data-author="흑요석">흑요석</span></span>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>52.3만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#" data-series="night">
+            <div class="story-card__img"><img src="assets/img/orig-3.png" alt="무관 조족등" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Character</span>
+              <h3>무관 조족등</h3>
+              <p>밤길이 어둡습니다. 함께 가시죠.</p>
+              <span class="author"><span class="author__link" role="link" tabindex="0" data-author="진돌">진돌</span><span class="sep">·</span><span class="author__link" role="link" tabindex="0" data-author="흑요석">흑요석</span></span>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>18.6만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#" data-series="night">
+            <div class="story-card__img"><img src="assets/img/orig-2.png" alt="어항 선녀" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Character</span>
+              <h3>어항 선녀</h3>
+              <p>맑은 물에 어여쁜 고기가 사는 법이지요</p>
+              <span class="author"><span class="author__link" role="link" tabindex="0" data-author="진돌">진돌</span><span class="sep">·</span><span class="author__link" role="link" tabindex="0" data-author="흑요석">흑요석</span></span>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>9.4만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#" data-series="night">
+            <div class="story-card__img"><img src="assets/img/orig-4.png" alt="청사초롱" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Character</span>
+              <h3>청사초롱</h3>
+              <p>달은 밝은데 무료하구나</p>
+              <span class="author"><span class="author__link" role="link" tabindex="0" data-author="진돌">진돌</span><span class="sep">·</span><span class="author__link" role="link" tabindex="0" data-author="흑요석">흑요석</span></span>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>27.1만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#" data-series="central">
+            <div class="story-card__img"><img src="assets/img/orig-5.png" alt="까스날로 3세" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Character</span>
+              <h3>까스날로 3세</h3>
+              <p>춥나. 내 곁으로 와라.</p>
+              <span class="author"><span class="author__link" role="link" tabindex="0" data-author="진돌">진돌</span></span>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>6.2만</span>
+            </div>
+          </a>
+          <a class="story-card" href="#" data-series="central">
+            <div class="story-card__img"><img src="assets/img/orig-6.png" alt="케로센 베일" loading="lazy"></div>
+            <div class="story-card__body">
+              <span class="official"><i class="wt-mark"></i>Official Character</span>
+              <h3>케로센 베일</h3>
+              <p>이 모든 것이 부당하다는 생각 안 해봤나</p>
+              <span class="author"><span class="author__link" role="link" tabindex="0" data-author="진돌">진돌</span></span>
+              <span class="count"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>4.8만</span>
+            </div>
+          </a>
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== 대화 ========== -->
+    <main class="screen" id="screen-chat" data-screen="chat">
+      <header class="pagehead"><h1>대화</h1></header>
+
+      <div class="hscroll chips chips--people">
+        <button class="chip"><span class="avatar avatar--sm"><img src="assets/img/haein.jpg" alt=""></span>신해인</button>
+        <button class="chip"><span class="avatar avatar--sm ph ph-dohwa"></span>백도화</button>
+        <button class="chip"><span class="avatar avatar--sm ph ph-eunhyuk"></span>고은혁</button>
+        <button class="chip"><span class="avatar avatar--sm ph ph-maru"></span>한마루</button>
+        <button class="chip"><span class="avatar avatar--sm ph ph-star"></span>이여운</button>
+      </div>
+
+      <ul class="chat-list" id="chat-list"></ul>
+    </main>
+
+    <!-- ========== 만들기 ========== -->
+    <main class="screen" id="screen-create" data-screen="create">
+      <header class="pagehead"><h1>만들기</h1></header>
+
+      <div class="card creator">
+        <div class="creator__avatar">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4 21a8 8 0 0 1 16 0z"/></svg>
+        </div>
+        <div class="creator__info">
+          <strong class="creator__name">치즈달</strong>
+          <p>팬 크리에이터 랭킹 <b>없음</b></p>
+          <p>대화량 합계 <b>0</b></p>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <h2 class="section__title">나의 스토리</h2>
+        <button class="btn btn--accent">
+          <svg viewBox="0 0 24 24"><path d="M4 20l10-10"/><path d="M14 4l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/><path d="M19 11l.6 1.2 1.4.6-1.4.6L19 15l-.6-1.6-1.4-.6 1.4-.6z"/></svg>
+          만들기
+        </button>
+      </div>
+
+      <div class="grid-2 mystory">
+        <a class="story-card story-card--draft" href="#">
+          <div class="story-card__img story-card__img--empty"></div>
+          <button class="kebab kebab--h" aria-label="더보기"><i></i><i></i><i></i></button>
+          <div class="story-card__body">
+            <h3>제목 없음</h3>
+            <p>소개글 없음</p>
+            <span class="tag">태그 없음</span>
+            <span class="draft"><svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M13 7l4 4"/></svg>임시저장</span>
+          </div>
+        </a>
+        <a class="story-card story-card--draft" href="#">
+          <div class="ph ph-lala story-card__img"></div>
+          <button class="kebab kebab--h" aria-label="더보기"><i></i><i></i><i></i></button>
+          <div class="story-card__body">
+            <h3>랄라</h3>
+            <p>소개글 없음</p>
+            <span class="tag">태그 없음</span>
+            <span class="draft"><svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M13 7l4 4"/></svg>임시저장</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- ========== 더보기 ========== -->
+    <main class="screen" id="screen-more" data-screen="more">
+      <header class="pagehead"><h1>더보기</h1></header>
+
+      <div class="card jelly">
+        <div class="jelly__row">
+          <span class="jelly__label"><i class="jelly-icon"></i>나의 젤리</span>
+          <strong class="jelly__count">2,945개</strong>
+        </div>
+        <button class="btn btn--block">젤리샵 바로가기</button>
+      </div>
+
+      <div class="section-row">
+        <h2 class="section__title">내 페르소나 관리</h2>
+        <button class="btn btn--white btn--sm">+ 새 페르소나</button>
+      </div>
+      <div class="card persona">
+        <span>오하경</span>
+        <button class="kebab" aria-label="더보기"><i></i><i></i><i></i></button>
+      </div>
+
+      <h2 class="section__title section__title--gap">고객 도움말</h2>
+      <ul class="menu">
+        <li><a href="#">
+          <svg viewBox="0 0 24 24"><path d="M4 10v4h3l6 4V6l-6 4z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg>
+          <span>💜&lt;내 최애는 막차를 탄다&gt; 신해인 스토리 런칭!</span>
+          <i class="chev"></i></a></li>
+        <li><a href="#">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .8-1 1.5"/><circle cx="12" cy="17" r=".6" fill="currentColor"/></svg>
+          <span>고객센터</span>
+          <i class="chev"></i></a></li>
+        <li><a href="#">
+          <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+          <span>이용약관</span>
+          <i class="chev"></i></a></li>
+      </ul>
+
+      <h2 class="section__title section__title--gap">담아둔 스토리</h2>
+      <div class="empty">
+        <svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+        <p>스토리 보기에서 마음에 드는 스토리를 담아보세요.</p>
+      </div>
+    </main>
+
+    <!-- ========== 알림 ========== -->
+    <main class="screen screen--sub" id="screen-notice" data-screen="notice">
+      <header class="pagehead pagehead--back">
+        <button class="icon-btn" aria-label="뒤로" data-back>
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <h1>알림</h1>
+      </header>
+
+      <div class="card banner">
+        <span class="banner__text"><i class="jelly-icon"></i>무료 젤리 놓치지 마세요!</span>
+        <button class="btn btn--white btn--sm">알림 설정</button>
+      </div>
+
+      <ul class="notice-list" id="notice-list"></ul>
+    </main>
+
+    <!-- ========== 원작자 프로필 ========== -->
+    <main class="screen screen--sub" id="screen-profile" data-screen="profile">
+      <header class="pagehead pagehead--center">
+        <button class="icon-btn" aria-label="뒤로" data-back>
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <h1>프로필</h1>
+        <div class="pagehead__actions">
+          <button class="icon-btn" aria-label="알림" data-go="notice">
+            <svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="더보기">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="profile">
+        <div class="profile__top">
+          <div class="profile__avatar ph ph-maru" id="profile-avatar"></div>
+          <div class="profile__meta">
+            <h2 class="profile__name" id="profile-name">진돌</h2>
+            <span class="profile__official"><i class="badge-ico"></i>공식 크리에이터</span>
+            <p class="profile__follow">팔로워 <b id="profile-followers">1043</b> <span class="dot">·</span> 팔로잉 <b id="profile-following">47</b></p>
+          </div>
+        </div>
+
+        <div class="profile__bio card">
+          <p id="profile-bio">서사 위주의 다양한 캐릭터를 만들고 있습니다.<br/>문의, 건의, 찐빠신고 모든 댓글 환영합니다.🥰…</p>
+          <button class="profile__more">더보기</button>
+        </div>
+
+        <div class="profile__actions">
+          <button class="btn btn--outline" id="profile-follow">팔로잉</button>
+          <button class="btn btn--gift"><i class="jelly-icon jelly-icon--green"></i>젤리 선물</button>
+        </div>
+      </section>
+
+      <div class="ptabs" role="tablist">
+        <button class="ptab is-active" role="tab" data-ptab="works">작품</button>
+        <button class="ptab" role="tab" data-ptab="series">시리즈</button>
+        <button class="ptab" role="tab" data-ptab="links">링크</button>
+      </div>
+
+      <!-- 작품 -->
+      <div class="ppanel is-active" data-ptab="works">
+        <div class="pills">
+          <button class="pill is-active" data-pill="character">오리지널</button>
+          <button class="pill" data-pill="story">웹툰원작</button>
+        </div>
+
+        <div class="pill-panel is-active" data-pill="character">
+          <div class="list-head">
+            <h3>작품 목록 <span id="works-count">0건</span></h3>
+            <button class="filter-tag" id="works-filter" hidden aria-label="시리즈 필터 해제"><span></span><i>×</i></button>
+            <button class="sort">최신순 <i class="chev chev--down"></i></button>
+          </div>
+          <div class="grid-3" id="works-grid"></div>
+        </div>
+
+        <div class="pill-panel" data-pill="story">
+          <div class="empty empty--tall">
+            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <p>아직 등록한 스토리가 없어요.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 시리즈 -->
+      <div class="ppanel" data-ptab="series">
+        <div class="list-head">
+          <h3>전체 목록 <span id="series-count">2개</span></h3>
+          <button class="sort">최신순 <i class="chev chev--down"></i></button>
+        </div>
+        <div class="grid-3" id="series-grid"></div>
+      </div>
+
+      <!-- 링크 -->
+      <div class="ppanel" data-ptab="links">
+        <ul class="menu links">
+          <li><a href="#" target="_blank" rel="noopener">
+            <i class="link-ico link-ico--webtoon"><img src="assets/img/logo-webtoon.png" alt=""></i>
+            <span>네이버웹툰 작가 홈 바로가기</span>
+            <i class="chev"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener">
+            <i class="link-ico link-ico--youtube"><svg viewBox="0 0 24 24"><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></i>
+            <span>유튜브 채널 바로가기</span>
+            <i class="chev"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener">
+            <i class="link-ico link-ico--insta"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></i>
+            <span>인스타그램 바로가기</span>
+            <i class="chev"></i></a></li>
+          <li><a href="#" target="_blank" rel="noopener">
+            <i class="link-ico link-ico--x">X</i>
+            <span>X 바로가기</span>
+            <i class="chev"></i></a></li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- ========== 하단 탭 ========== -->
+    <nav class="tabbar">
+      <div class="tabbar__pill">
+        <button class="tab is-active" data-tab="home">
+          <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4z"/></svg><span>홈</span>
+        </button>
+        <button class="tab" data-tab="chat">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><span>대화</span>
+        </button>
+        <button class="tab" data-tab="create">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>만들기</span>
+        </button>
+        <button class="tab" data-tab="more">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg><span>더보기</span>
+        </button>
+      </div>
+      <a class="tabbar__webtoon" href="#" aria-label="WEBTOON">
+        <img src="assets/img/logo-webtoon.png" alt="WEBTOON">
+      </a>
+    </nav>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

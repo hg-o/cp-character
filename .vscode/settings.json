@@ -1,0 +1,5 @@
+{
+  "livePreview.defaultPreviewPath": "/index.html",
+  "livePreview.openPreviewTarget": "Embedded Preview",
+  "livePreview.serverRoot": "/"
+}
